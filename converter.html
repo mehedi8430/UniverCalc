@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniverCalc - Navigating the Multiverse of Calculations</title>
+    <link rel="stylesheet" href="./css/converter.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Calculator</a></li>
+          <li><a href="converter.html">Unit Converter</a></li>
+        </ul>
+      </div>
+      <div class="dayNight">
+        <input id="dayNight" type="button" value="Day" />
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="header-title">Multiple Converter</h1>
+      <div class="divider"></div>
+
+      <div class="category-wrap">
+        <label class="lead" for="category-select">Select Category</label>
+        <select class="text-input" id="category-select">
+          <option value="mass">Mass</option>
+          <option value="length">Length</option>
+          <option value="area">Area</option>
+        </select>
+      </div>
+
+      <div class="input-group-wrap">
+        <div>
+          <input type="text" class="text-input" id="left-inp" />
+          <select class="text-input" id="left-select">
+            <option value="KM">Kilometer</option>
+            <option value="M">Meter</option>
+            <option value="CM">Centimeter</option>
+          </select>
+        </div>
+        <div class="equal">=</div>
+        <div>
+          <input type="text" class="text-input" id="right-inp" />
+          <select class="text-input" id="right-select">
+            <option value="KM">Kilometer</option>
+            <option value="M">Meter</option>
+            <option value="CM">Centimeter</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="formula-wrap">
+        <h3>Formula</h3>
+        <p id="formula-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+          nostrum delectus expedita fuga harum eveniet, qui quas, repudiandae
+          recusandae dolorem, provident asperiores beatae ipsum! Animi nisi,
+          magnam neque omnis optio consectetur maiores accusamus doloribus et
+          ipsam quod possimus corrupti, rem ex? Modi, sunt?
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Created by
+        <a href="https://github.com/mehedi8430" target="_blank">Mehedi Hasan</a>
+        <span></span>
+      </p>
+    </footer>
+
+    <script>
+      const currentDate = new Date();
+      const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+      const day = String(currentDate.getDate()).padStart(2, "0");
+      const year = String(currentDate.getFullYear());
+      document.querySelector(
+        "footer span"
+      ).innerHTML = `10/09/2023-${day}/${month}/${year}`;
+    </script>
+
+    <script src="./js/converter.js"></script>
+  </body>
+</html>

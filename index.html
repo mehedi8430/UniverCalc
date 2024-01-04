@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniverCalc - Navigating the Multiverse of Calculations</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Calculator</a></li>
+          <li><a href="converter.html">Unit Converter</a></li>
+        </ul>
+      </div>
+      <div class="dayNight">
+        <input id="dayNight" type="button" value="Day" />
+      </div>
+    </header>
+
+    <div class="calculator">
+      <h1>Online Calculator</h1>
+      <form>
+        <textarea name="" id="" cols="30" rows="1" readonly disabled></textarea>
+        <div class="btn-list">
+          <button data-value="√">√</button>
+          <button data-value="pow">x <sup>y</sup></button>
+          <button data-value="log">Log</button>
+          <button data-value="!">X!</button>
+          <button data-value="(">(</button>
+          <button data-value=")">)</button>
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button data-value="*">x</button>
+          <button data-value="DEL">DEL</button>
+          <button data-value="AC">AC</button>
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button data-value="/">/</button>
+          <button data-value="sin">sin</button>
+          <button data-value="sinh">sinh</button>
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button data-value="+">+</button>
+          <button data-value="-">-</button>
+          <button data-value="cos">cos</button>
+          <button data-value="0">0</button>
+          <button data-value=".">.</button>
+          <button data-value=",">,</button>
+          <button data-value="sci">SCI</button>
+          <button data-value="log10">Log10</button>
+          <button data-value="cosh">cosh</button>
+          <button data-value="pi">π</button>
+          <button data-value="e">e</button>
+          <button data-value="%">%</button>
+          <button data-value="abs">Abs</button>
+          <button data-value="tan">tan</button>
+          <button data-value="tanh">tanh</button>
+          <!-- <button data-value="cubicRoot">∛</button> -->
+          <button data-value="=">=</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>
+        Created by
+        <a href="https://github.com/mehedi8430" target="_blank">Mehedi Hasan</a>
+        <span></span>
+      </p>
+    </footer>
+
+    <script>
+      const currentDate = new Date();
+      const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+      const day = String(currentDate.getDate()).padStart(2, "0");
+      const year = String(currentDate.getFullYear());
+      document.querySelector(
+        "footer span"
+      ).innerHTML = `10/09/2023-${day}/${month}/${year}`;
+    </script>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
